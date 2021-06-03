@@ -1,0 +1,3 @@
+﻿There is no deletion target
+
+{0}

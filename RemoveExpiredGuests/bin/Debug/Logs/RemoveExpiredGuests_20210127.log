@@ -1,0 +1,9 @@
+2021.01.27 16:52:25 420 Success 「_04 TestGuest」 guest has been removed. 
+2021.01.27 16:52:35 954 Error Source property was not set before writing to the event log. 
+2021.01.27 16:53:43 836 Success 「_04 TestGuest」 guest has been removed. 
+2021.01.27 16:53:43 846 Error Source property was not set before writing to the event log. 
+2021.01.27 16:54:45 612 Success 「_04 TestGuest」 guest has been removed. 
+2021.01.27 17:06:30 218 Error Object reference not set to an instance of an object. 
+2021.01.27 17:07:47 604 Success 「_05 TestGuest」 guest has been removed. 
+2021.01.27 17:07:47 624 Error Source property was not set before writing to the event log. 
+2021.01.27 18:07:07 307 Success 「_05 TestGuest」 guest has been removed. 

@@ -1,0 +1,7 @@
+Error Log is Create at 1/5/2021 5:04:45 PM
+Debug Test
+Error Log is Create at 1/5/2021 5:07:55 PM
+Debug Test
+Error Log is Create at 1/5/2021 5:38:17 PM
+Debug Test
+   at RemoveExpiredGuests.Program.Main(String[] args) in C:\Users\sgvn280\Desktop\ProjectSBT150\RemoveExpiredGuests\RemoveExpiredGuests\Program.cs:line 45

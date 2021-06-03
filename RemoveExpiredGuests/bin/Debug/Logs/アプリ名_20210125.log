@@ -1,0 +1,16 @@
+2021.01.25 16:01:50 319 Error One or more errors occurred.
+Code: ResourceNotFound
+Message: Invalid version: bata
+Inner error:
+	AdditionalData:
+	date: 2021-01-25T09:05:47
+	request-id: 756d3a19-30fb-48cf-b01f-03c0f55c3bda
+	client-request-id: 756d3a19-30fb-48cf-b01f-03c0f55c3bda
+ClientRequestId: 756d3a19-30fb-48cf-b01f-03c0f55c3bda
+ 
+2021.01.25 16:12:16 297 Success 「takiw92008」 guest has been removed. 
+2021.01.25 16:15:07 033 Success 「takiw92008」 guest has been removed. 
+2021.01.25 16:34:14 256 Success 「takiw92008」 guest has been removed. 
+2021.01.25 17:04:34 154 Error Object reference not set to an instance of an object. 
+2021.01.25 17:06:27 636 Success 「takiw92008」 guest has been removed. 
+2021.01.25 17:20:17 991 Error Object reference not set to an instance of an object. 

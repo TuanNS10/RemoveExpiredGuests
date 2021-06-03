@@ -1,0 +1,73 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\RemoveExpiredGuests\\RemoveExpiredGuests\\RemoveExpiredGuests.csproj": {}
+  },
+  "projects": {
+    "D:\\RemoveExpiredGuests\\RemoveExpiredGuests\\RemoveExpiredGuests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\RemoveExpiredGuests\\RemoveExpiredGuests\\RemoveExpiredGuests.csproj",
+        "projectName": "RemoveExpiredGuests",
+        "projectPath": "D:\\RemoveExpiredGuests\\RemoveExpiredGuests\\RemoveExpiredGuests.csproj",
+        "packagesPath": "C:\\Users\\sanht\\.nuget\\packages\\",
+        "outputPath": "D:\\RemoveExpiredGuests\\RemoveExpiredGuests\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\sanht\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "dependencies": {
+            "Microsoft.Graph.Beta": {
+              "target": "Package",
+              "version": "[0.35.0-preview, )"
+            },
+            "Microsoft.Identity.Client": {
+              "target": "Package",
+              "version": "[4.24.0, )"
+            },
+            "Microsoft.Windows.SDK.Contracts": {
+              "target": "Package",
+              "version": "[10.0.17763.1000, )"
+            },
+            "System.Runtime.WindowsRuntime": {
+              "target": "Package",
+              "version": "[4.6.0, )"
+            },
+            "System.Runtime.WindowsRuntime.UI.Xaml": {
+              "target": "Package",
+              "version": "[4.6.0, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

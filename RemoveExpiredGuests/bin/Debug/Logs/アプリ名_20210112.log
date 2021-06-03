@@ -1,0 +1,34 @@
+2021.01.12 10:21:21 313 Success 「nofev60836」 guest has been removed. 
+2021.01.12 10:33:30 475 Success 「nofev60836」 guest has been removed. 
+2021.01.12 10:37:00 423 Success 「nofev60836」 guest has been removed. 
+2021.01.12 10:45:12 663 Success 「nofev60836」 guest has been removed. 
+2021.01.12 11:03:57 230 Success 「nofev60836」 guest has been removed. 
+2021.01.12 11:15:04 581 Success 「nofev60836」 guest has been removed. 
+2021.01.12 11:37:25 034 Success 「nofev60836」 guest has been removed. 
+2021.01.12 11:48:41 676 Error One or more errors occurred.
+AADSTS900023: Specified tenant identifier 'tuan@takenakabbs.onmicrosoft.com' is neither a valid DNS name, nor a valid external domain.
+Trace ID: 8fbe7ee7-cfb8-44f2-841f-b9c63c942200
+Correlation ID: 6cb12b5e-7b5b-4ef8-9720-8adcaf18eb88
+Timestamp: 2021-01-12 04:51:01Z 
+2021.01.12 11:48:56 116 Error One or more errors occurred.
+Code: InvalidAuthenticationToken
+Message: CompactToken parsing failed with error code: 80049217
+Inner error:
+	AdditionalData:
+	date: 2021-01-12T04:51:01
+	request-id: 9e695748-548e-48f4-b39a-5cdb1e8746bd
+	client-request-id: 9e695748-548e-48f4-b39a-5cdb1e8746bd
+ClientRequestId: 9e695748-548e-48f4-b39a-5cdb1e8746bd
+ 
+2021.01.12 14:43:12 395 Success 「nofev60836」 guest has been removed. 
+2021.01.12 14:49:46 564 Success 「nofev60836」 guest has been removed. 
+2021.01.12 14:53:41 956 Success 「nofev60836」 guest has been removed. 
+2021.01.12 14:59:31 274 Success 「nofev60836」 guest has been removed. 
+2021.01.12 15:00:17 244 Success 「nofev60836」 guest has been removed. 
+2021.01.12 15:10:16 122 Success 「nofev60836」 guest has been removed. 
+2021.01.12 15:11:09 885 Success 「nofev60836」 guest has been removed. 
+2021.01.12 15:12:12 803 Success 「nofev60836」 guest has been removed. 
+2021.01.12 15:13:08 206 Success 「nofev60836」 guest has been removed. 
+2021.01.12 15:13:34 844 Success 「nofev60836」 guest has been removed. 
+2021.01.12 15:22:28 856 Success 「nofev60836」 guest has been removed. 
+2021.01.12 15:23:57 635 Success 「nofev60836」 guest has been removed. 

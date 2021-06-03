@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "/xZ4Ua771Yj75M7W/1MH/o3tDTr4SWwl8UA+5LEs84dO883fDGfIaTmjJJz8oprnbG/xI4/xq8JuaPhYdQs34w==",
+  "success": true,
+  "projectFilePath": "D:\\RemoveExpiredGuests\\RemoveExpiredGuests\\RemoveExpiredGuests.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sanht\\.nuget\\packages\\microsoft.graph.beta\\0.35.0-preview\\microsoft.graph.beta.0.35.0-preview.nupkg.sha512",
+    "C:\\Users\\sanht\\.nuget\\packages\\microsoft.graph.core\\1.23.0\\microsoft.graph.core.1.23.0.nupkg.sha512",
+    "C:\\Users\\sanht\\.nuget\\packages\\microsoft.identity.client\\4.24.0\\microsoft.identity.client.4.24.0.nupkg.sha512",
+    "C:\\Users\\sanht\\.nuget\\packages\\microsoft.windows.sdk.contracts\\10.0.17763.1000\\microsoft.windows.sdk.contracts.10.0.17763.1000.nupkg.sha512",
+    "C:\\Users\\sanht\\.nuget\\packages\\newtonsoft.json\\6.0.1\\newtonsoft.json.6.0.1.nupkg.sha512",
+    "C:\\Users\\sanht\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\sanht\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
+    "C:\\Users\\sanht\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\sanht\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\sanht\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.3\\system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512",
+    "C:\\Users\\sanht\\.nuget\\packages\\system.runtime.windowsruntime\\4.6.0\\system.runtime.windowsruntime.4.6.0.nupkg.sha512",
+    "C:\\Users\\sanht\\.nuget\\packages\\system.runtime.windowsruntime.ui.xaml\\4.6.0\\system.runtime.windowsruntime.ui.xaml.4.6.0.nupkg.sha512",
+    "C:\\Users\\sanht\\.nuget\\packages\\system.valuetuple\\4.3.0\\system.valuetuple.4.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}

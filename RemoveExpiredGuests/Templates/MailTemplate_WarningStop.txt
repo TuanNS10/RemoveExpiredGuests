@@ -1,0 +1,9 @@
+﻿The process was interrupted because an error occurred during the delete process.
+
+■ Guest accounts that have been successfully deleted
+{0}
+
+■ Guest accounts that could not be deleted
+{1}
+
+　

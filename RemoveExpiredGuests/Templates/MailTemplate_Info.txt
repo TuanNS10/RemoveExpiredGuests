@@ -1,0 +1,4 @@
+The follow guest accounts have been deleted.
+
+
+{0}

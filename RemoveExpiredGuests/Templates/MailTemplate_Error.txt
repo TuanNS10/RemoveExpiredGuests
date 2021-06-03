@@ -1,0 +1,4 @@
+Failed to delete the guest account.
+
+■ Error details
+{0}
