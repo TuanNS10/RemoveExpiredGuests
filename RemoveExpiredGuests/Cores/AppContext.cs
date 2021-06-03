@@ -52,14 +52,20 @@ namespace RemoveExpiredGuests.Cores
             }
         }
 
-        
+        /// <summary>
+        /// Get or set the Graph service (private set)
+        /// </summary>
+        public GraphService Graph { get; private set; }
 
         /// <summary>
         /// Get or set the mail service (private set)
         /// </summary>
         public MailService Mail { get; private set; }
 
-       
+        /// <summary>
+        /// Get or set the log service (private set)
+        /// </summary>
+        public LogService Log { get; private set; }
 
         /// <summary>
         /// Constructor
@@ -79,9 +85,9 @@ namespace RemoveExpiredGuests.Cores
 
             var apiEndpoint = $"https://graph.microsoft.com/{apiVersion}";
 
-            
+            Log   = new LogService();
             Mail  = new MailService();
-           
+            Graph = new GraphService(apiEndpoint);
         }
 
         /// <summary>
@@ -91,7 +97,9 @@ namespace RemoveExpiredGuests.Cores
         {
             AppSetting.Validate();
 
-           
+            Log.Validate();
+            Mail.Validate();
+            Graph.Validate();
         }
 
         /// <summary>
