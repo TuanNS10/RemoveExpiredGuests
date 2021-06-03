@@ -31,7 +31,16 @@ namespace RemoveExpiredGuests.Bases.Extensions
         /// <returns>An object with validate result, if error occurs attach error to result</returns>
         public static (bool Valid, Exception Error) SendMail(this User user)
         {
-            
+            try
+            {
+                var appContext = Cores.AppContext.GetInstance();
+
+                var message = appContext.Mail.GetMessage();
+                appContext.Graph.Users[user.Id].SendMail(message).Request().PostAsync().Wait();
+
+                return (true, null);
+            }
+            catch(Exception error) { return (false, error); }
         }
 
         /// <summary>
@@ -41,7 +50,20 @@ namespace RemoveExpiredGuests.Bases.Extensions
         /// <returns>An object with validate result, if error occurs attach error to result</returns>
         public static (bool Valid, Exception Error) IsExpired(this User user)
         {
-          
+            try
+            {
+                if(user.SignInActivity != null)
+                {
+                    var appSetting = Cores.AppSetting.GetInstance();
+                    var lastSignedIn = user.SignInActivity.LastSignInDateTime.Value.DateTime;
+                    if((DateTime.Now - lastSignedIn.ToLocalTime()).Days > appSetting.LimitDays)
+                    {
+                        return (true, null);
+                    }
+                }
+                return (false, null);
+            }
+            catch(Exception error) { return (false, error); }
         }
 
         /// <summary>
@@ -51,7 +73,14 @@ namespace RemoveExpiredGuests.Bases.Extensions
         /// <returns>An object with validate result, if error occurs attach error to result</returns>
         public static (bool Valid, Exception Error) IsInGroup(this User user)
         {
-            
+            try
+            {
+                var appContext = Cores.AppContext.GetInstance();
+                var groups = appContext.Graph.Users[user.Id].MemberOf.Request().GetAsync().Result.CurrentPage;
+
+                return (groups.Count > 0, null);
+            }
+            catch(Exception error) { return (false, error); }
         }
 
         /// <summary>
@@ -61,7 +90,19 @@ namespace RemoveExpiredGuests.Bases.Extensions
         /// <returns>An object with validate result, if error occurs attach error to result</returns>
         public static (bool Valid, Exception Error) CanRemove(this User user)
         {
-            
+            var isExpired = user.IsExpired();
+            if (!isExpired.Valid && isExpired.Error == null)
+            {
+                return (isExpired.Valid, isExpired.Error);
+            }
+
+            var isInGroup = user.IsInGroup();
+            if (!isInGroup.Valid && isInGroup.Error == null)
+            {
+                return (!isInGroup.Valid, isInGroup.Error);
+            }
+
+            return (isExpired.Valid && isExpired.Valid, null);
         }
 
         /// <summary>
@@ -71,7 +112,22 @@ namespace RemoveExpiredGuests.Bases.Extensions
         /// <returns>An object with validate result, if error occurs attach error to result</returns>
         public static (bool Valid, Exception Error) Remove(this User user)
         {
-            
+            var appContext = Cores.AppContext.GetInstance();
+            var appSetting = Cores.AppSetting.GetInstance();
+
+            try
+            {
+                if (appSetting.IsDeleteFlag == true)
+                {
+                    appContext.Graph.Users[user.Id].Request().DeleteAsync().Wait();
+                    return (true, null);
+                }
+                else
+                {
+                    return (true, null);
+                }
+            }
+            catch (Exception error) { return (false, error.InnerException); }
         }
     }
 }
