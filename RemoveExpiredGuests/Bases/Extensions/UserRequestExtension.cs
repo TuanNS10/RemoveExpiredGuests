@@ -39,7 +39,18 @@ namespace RemoveExpiredGuests.Bases.Extensions
         /// <returns>List of users</returns>
         public static List<User> Fetch(this UsersRequest request, Expression<Func<User, object>> select)
         {
-            
+            var page = request.Select(select).GetAsync().Result;
+
+            var resp = new List<User>();
+            resp.AddRange(page.CurrentPage);
+
+            while (page.NextPageRequest != null)
+            {
+                page = page.NextPageRequest.GetAsync().Result;
+                resp.AddRange(page.CurrentPage);
+            }
+
+            return resp;
         }
 
         /// <summary>
@@ -50,7 +61,18 @@ namespace RemoveExpiredGuests.Bases.Extensions
         /// <returns>List of users</returns>
         public static List<User> Fetch(this UsersRequest request)
         {
-           
+            var page = request.GetAsync().Result;
+
+            var resp = new List<User>();
+            resp.AddRange(page.CurrentPage);
+
+            while (page.NextPageRequest != null)
+            {
+                page = page.NextPageRequest.GetAsync().Result;
+                resp.AddRange(page.CurrentPage);
+            }
+
+            return resp;
         }
 
         /// <summary>
@@ -61,7 +83,13 @@ namespace RemoveExpiredGuests.Bases.Extensions
         /// <returns>The user if User Principal Name is found, otherwise is null</returns>
         public static User GetByUPN(this UsersRequest request, string upn)
         {
-           
+            var appContext = Cores.AppContext.GetInstance();
+
+            var requestUser = appContext.Graph.Users.Request();
+            requestUser = (UsersRequest)requestUser.Filter($"UserPrincipalName eq '{ upn }'");
+
+            var users = requestUser.GetAsync().Result.CurrentPage;
+            return users.Count == 0 ? null : users[0];
         }
 
         /// <summary>
@@ -71,7 +99,13 @@ namespace RemoveExpiredGuests.Bases.Extensions
         /// <returns>The user for sending notification result mail</returns>
         public static User GetMailFromUser(this UsersRequest request)
         {
-            
+            var appSetting = Cores.AppSetting.GetInstance();
+            var user = request.GetByUPN(appSetting.FromAddresses);
+            if (user != null)
+            {
+                return user;
+            }
+            throw new NotFoundMailFromException(appSetting.FromAddresses);
         }
     }
 }
