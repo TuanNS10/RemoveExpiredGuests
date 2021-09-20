@@ -8,3 +8,4 @@ Build System: Remove expired guest on Azure Active Directory. Using Microsoft Gr
 - Remove the guest user
 - Send a mail for notifing the processed result
 - Write file log service
+### Copyright ©  2021 by Sanh Tuấn
